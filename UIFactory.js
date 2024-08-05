@@ -1,32 +1,32 @@
 const myui = {}
-
-myui.DropdownButton = function(layout, name, size) {
-   return new DropDown(layout, name, size)          
+//myui.theme("Light");
+myui.theme = function(ThemeMode){
+  return new UITheme("Light");
 }
 
-class UITheme(theme_mode){
-   constructor(theme_mode){
-   this._theme = theme_mode;
-   try{
-   		if(this._theme === 'Light' || this._theme === "Dark"){
-   		  this.color= {}
-   		}//IF-END
-   		else{throw 'Theme is Invalid' }
-   		}//TRY--END
-   }//CONSTRUCTOR---END
+myui.DropdownButton = function(layout, name, size) {
+   return new DropDown(myui.theme(), layout, name, size)          
+}
 
-}//-CLASS------END------END------END------END------END
+class UITheme {
+   constructor(theme_mode) {
+         this._theme = theme_mode;
+ 
+            if(this._theme === "Light" || this._theme === "Dark") {
+               static color = {"btn" : "red"}
+            } //IF-END
+            else {
+               app.Alert("Theme is Invalid");
+            }
+
+         } //CONSTRUCTOR---END
+
+      } //-CLASS------END------END------END------END------END
 
 
 class UXFactory {
    constructor(theme_mode) {
-      this._theme = theme_mode;
-      this.ux = {
-         color: {
-            'base' : (this._theme === 'Light' ? "#FF444444": "#FF222222")
-
-            }
-         };
+      //this._themeMode = theme_mode;
          //return this
       }
    }
@@ -34,15 +34,16 @@ class UXFactory {
 
 
 class DropDown extends UXFactory {
-   constructor(modelayout, name, size) {
+   constructor(theme_mode, layout, name, size) {
          super(theme_mode);
+         this.color = theme_mode;
          this._name = name;
          this._size = size;
          this._layout = layout;
          this._items = [];
          this._menuVisibility = false;
          this._IsActive = false;
-         app.Alert(mode);
+         app.Alert(JSON.stringify(this.color));
       }
       //Getters and Setters↓↓↓
    get items() {

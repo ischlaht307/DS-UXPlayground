@@ -2,7 +2,7 @@ cfg.Fast;
 //Called when application is started.
 function OnStart()
 {
-myui.Theme('Light');
+myui.theme("Light");
 	//Create a layout with objects vertically centered.
 	mainLay = app.CreateLayout( "Linear", "VCenter,FillXY" )
 
@@ -12,7 +12,7 @@ myui.Theme('Light');
 	mainLay.AddChild( txt )
 	
 var menuList =  "item1 hvkuyvuiyvigvg| item2| item3|item4| item5| item6";
-	var dd = myui.DropdownButton("Light", mainLay, "Dropdown menu", -1);
+	var dd = myui.DropdownButton(mainLay, "Dropdown menu", -1);
 	dd.addItems = "items 1x sdfgsdfgsdfg";
 	dd.addItems = "items 2";
 	dd.addItems = "Items 3";
