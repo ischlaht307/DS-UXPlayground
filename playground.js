@@ -2,7 +2,6 @@ cfg.Fast;
 //Called when application is started.
 function OnStart()
 {
-myui.theme("Light");
 	//Create a layout with objects vertically centered.
 	mainLay = app.CreateLayout( "Linear", "VCenter,FillXY" )
 
