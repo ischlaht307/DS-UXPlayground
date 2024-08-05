@@ -2,6 +2,7 @@ cfg.Fast;
 //Called when application is started.
 function OnStart()
 {
+app.Hide();
 	//Create a layout with objects vertically centered.
 	mainLay = app.CreateLayout( "Linear", "VCenter,FillXY" )
 
@@ -25,10 +26,9 @@ var menuList =  "item1 hvkuyvuiyvigvg| item2| item3|item4| item5| item6";
 	
 	var btn =app.CreateButton( "ptgffghg", 0.8,-1.0 )
 	mainLay.AddChild(btn);
-	
 	app.AddLayout( mainLay )
 
-
+setTimeout(()=>{app.Show()}, 500)
 }
 app.Script("UIFactory.js");
 
