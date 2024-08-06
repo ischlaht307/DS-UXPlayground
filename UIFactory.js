@@ -58,7 +58,7 @@ class UITheme {
              "small" : 18,
              "medium" : 24,
              "large" : 30 ,
-             "head":
+             "head": 50
            }
          }
         //# if(this._theme === "Light" || this._theme === "Dark") {} //IF-END
