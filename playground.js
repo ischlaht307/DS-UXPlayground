@@ -1,4 +1,4 @@
-cfg.Fast;
+
 //Called when application is started.
 function OnStart()
 {
