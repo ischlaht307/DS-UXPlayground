@@ -23,7 +23,6 @@ var menuList =  "item1 hvkuyvuiyvigvg| item2| item3|item4| item5| item6";
 
 //	dd.SetBackColor("red");
 	
-	
 	var btn =app.CreateButton( "ptgffghg", 0.8,-1.0 )
 	mainLay.AddChild(btn);
 	app.AddLayout( mainLay )
